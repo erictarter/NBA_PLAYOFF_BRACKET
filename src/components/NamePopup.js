@@ -31,8 +31,8 @@ export const NamePopup = () => {
 
   return (
     <div className='name-modal'>
-      <form className='name-input' name='picks' method='post'>
-        <input type='hidden' name='picks' value='picks' />
+      <form className='name-input' name='contact' method='post'>
+        <input type='hidden' name='form-name' value='contact' />
         <label htmlFor='name'>Enter Name</label>
         <input id='name' type='text' name='name' />
         <input
