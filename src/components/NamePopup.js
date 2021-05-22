@@ -42,14 +42,13 @@ export const NamePopup = () => {
           name='picks'
         />
         {/* <input style={{ display: 'none' }} id='ec-sub' type='text' name='ec' /> */}
-        <button
+        <input
           onMouseDown={updateVals}
           onMouseOver={updateVals}
           type='submit'
           className='send-name'
-        >
-          Submit
-        </button>
+          value='Submit'
+        />
       </form>
     </div>
   );
