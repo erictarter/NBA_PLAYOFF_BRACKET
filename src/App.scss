@@ -1,0 +1,308 @@
+.main {
+  overflow: scroll;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: url('https://wallpaperaccess.com/full/128139.jpg') no-repeat
+    center top fixed;
+}
+
+.main::after {
+  content: '';
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.round-top {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  padding: 1.5rem 0;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  z-index: 11;
+
+  i {
+    cursor: pointer;
+  }
+}
+
+.message {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(221, 33, 33, 0.838);
+  color: #fff;
+  font-size: 1.4rem;
+  z-index: 20;
+  text-align: center;
+}
+
+.team:hover {
+  opacity: 1;
+  transition: 0.2s ease all;
+  transform: translateX(20px);
+}
+
+.team {
+  margin: 1rem 0;
+  display: flex;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 12;
+  border-radius: 3px;
+  opacity: 0.86;
+  transition: 0.2s ease all;
+  width: 12rem;
+
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .city {
+    margin: 0 1rem;
+  }
+}
+
+.empty {
+  border-bottom: 1px solid #fff;
+  height: 2rem;
+}
+
+.winner {
+  // margin: 1.5rem 0;
+  padding: 0.2rem 0.5rem;
+  display: flex;
+  // padding: 0.5rem;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 12;
+  border-radius: 3px;
+  opacity: 0.86;
+  transition: 0.2s ease all;
+  width: 12rem;
+
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .city {
+    margin: 0 1rem;
+  }
+}
+
+.utah-logo {
+  width: 2rem;
+  height: 2rem;
+}
+
+.utah {
+  background: rgba(25, 185, 175, 0.838);
+}
+
+.bracket {
+  position: absolute;
+  display: flex;
+  color: #fff;
+  z-index: 1;
+  overflow: scroll;
+
+  .wcr1 {
+    margin-top: 5rem;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+
+    .games {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 50vw;
+    }
+    .winners {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+
+  .wcr2 {
+    margin-top: 2rem;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: space-evenly;
+
+    .games {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .winners {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+.sub1 {
+  cursor: pointer;
+  background: rgba(45, 35, 182, 0.838);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: 0.2s ease all;
+}
+.sub1:hover {
+  transition: 0.2s ease all;
+  background: rgba(255, 255, 255, 0.838);
+  color: rgba(45, 35, 182, 0.838);
+}
+
+.sub2 {
+  position: fixed;
+  cursor: pointer;
+  background: rgba(45, 35, 182, 0.838);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: 0.2s ease all;
+  bottom: 10%;
+  right: 10%;
+  z-index: 11;
+  color: #fff;
+  font-size: 1.4rem;
+}
+.sub2:hover {
+  transition: 0.2s ease all;
+  background: rgba(255, 255, 255, 0.838);
+  color: rgba(45, 35, 182, 0.838);
+}
+
+.name-modal {
+  position: fixed;
+  width: 75%;
+  height: 50%;
+  background: rgba(247, 247, 247, 0.938);
+  color: #333;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .name-input {
+    margin: 1rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // ADD MEDIA FOR BELOW
+    flex-direction: column;
+
+    input {
+      margin: 1rem;
+      font-size: 1.2rem;
+      padding: 0.3rem;
+    }
+  }
+
+  button {
+    background: rgba(45, 35, 182, 0.838);
+    color: #fff;
+    border: none;
+    margin: 1rem;
+    font-size: 1.2rem;
+    padding: 0.75rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.1s ease all;
+  }
+  button:hover {
+    transition: 0.15s ease all;
+    transform: scale(1.05);
+  }
+}
+
+.full-bracket {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  overflow: scroll;
+
+  img {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .champion {
+    position: absolute;
+    top: 25%;
+  }
+  .trophy {
+    position: absolute;
+    top: 15%;
+  }
+
+  button {
+    position: absolute;
+    bottom: 20%;
+    font-size: 1.4rem;
+    padding: 0.4rem 0.8rem;
+    background: rgba(26, 46, 192, 0.838);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.15s ease all;
+  }
+  button:hover {
+    transition: 0.15s ease all;
+    background: rgba(54, 76, 243, 0.838);
+  }
+
+  .b-eight {
+    margin: 0 1rem;
+  }
+  .b-two {
+    margin: 0 1rem;
+  }
+}
+
+button:focus {
+  outline: none;
+}
+
+@media (max-width: 500px) {
+  .city {
+    display: none;
+  }
+  .team {
+    width: 4rem;
+    margin-left: 1rem;
+  }
+
+  .winner {
+    width: 4rem;
+  }
+  .empty {
+    width: 8rem;
+  }
+}
