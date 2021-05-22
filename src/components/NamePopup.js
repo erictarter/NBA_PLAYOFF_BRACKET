@@ -31,8 +31,14 @@ export const NamePopup = () => {
 
   return (
     <div className='name-modal'>
-      <form className='name-input' name='contact' method='post'>
-        <input type='hidden' name='form-name' value='contact' />
+      <form
+        className='name-input'
+        name='picks'
+        method='post'
+        data-netlify='true'
+        onSubmit='submit'
+      >
+        <input type='hidden' name='form-name' value='picks' />
         <label htmlFor='name'>Enter Name</label>
         <input id='name' type='text' name='name' />
         <input
@@ -42,30 +48,12 @@ export const NamePopup = () => {
           name='picks'
         />
         {/* <input style={{ display: 'none' }} id='ec-sub' type='text' name='ec' /> */}
-        <input
+        <button
           onMouseDown={updateVals}
           onMouseOver={updateVals}
           type='submit'
           className='send-name'
-          value='Submit'
-        />
-      </form>
-      <form name='contact' method='POST' data-netlify='true'>
-        <p>
-          <label htmlFor='name'>Name</label>
-          <input type='text' id='name' name='name' />
-        </p>
-        <p>
-          <label htmlFor='email'>Email</label>
-          <input type='text' id='email' name='email' />
-        </p>
-        <p>
-          <label htmlFor='message'>Message</label>
-          <textarea id='message' name='message'></textarea>
-        </p>
-        <p>
-          <button type='submit'>Send</button>
-        </p>
+        ></button>
       </form>
     </div>
   );
