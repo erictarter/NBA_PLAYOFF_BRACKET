@@ -31,9 +31,14 @@ export const NamePopup = () => {
 
   return (
     <div className='name-modal'>
-      <form className='name-input' name='contact' method='post'>
+      <form
+        className='name-input'
+        name='picks'
+        method='POST'
+        data-netlify='true'
+      >
+        <input type='hidden' name='picks' value='contact' />
         <label htmlFor='name'>Enter Name</label>
-        <input type='hidden' name='form-name' value='contact' />
         <input id='name' type='text' name='name' />
         <input
           style={{ display: 'none' }}
